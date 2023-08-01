@@ -1,4 +1,5 @@
 import ProductNav from './ProductNav';
+import SolutionNav from './SolutionNav';
 
 interface Props {
   showNav: boolean;
@@ -17,6 +18,7 @@ const Menu = ({ showNav }: Props) => {
         <nav className='px-3 mt-0 mb-0 text-base lg:px-6 max-lg:py-10 max-lg:px-5'>
           <ul className='flex overflow-y-auto lg:items-center lg:space-x-2 max-lg:flex-col max-lg:text-neutral-700 max-lg:text-xl max-lg:font-medium max-lg:space-y-6 max-lg:h-auto'>
             <ProductNav />
+            <SolutionNav />
           </ul>
         </nav>
       </div>
