@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Icons } from './Icons';
-import Container from './ui/Container';
-import HamburgerButton from './HamburgerButton';
-import HamburgerMenu from './HamburgerMenu';
+import Link from 'next/link';
+
+import { Icons } from '../Icons';
+import Container from '../ui/Container';
+import HamburgerButton from '../HamburgerButton';
+import Menu from './Menu';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -22,12 +24,12 @@ const Navbar = () => {
                 Sign Up
               </a>
             </div>
-            <a className='' href='https://github.com'>
+            <Link className='' href='/'>
               <Icons.logo />
-            </a>
+            </Link>
             <HamburgerButton showNav={showNav} setShowNav={setShowNav} />
           </div>
-          <HamburgerMenu showNav={showNav} />
+          <Menu showNav={showNav} />
         </div>
       </div>
     </Container>
