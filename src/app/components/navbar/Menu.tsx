@@ -1,3 +1,4 @@
+import OpenSourceNav from './OpenSourceNav';
 import ProductNav from './ProductNav';
 import SolutionNav from './SolutionNav';
 
@@ -19,6 +20,15 @@ const Menu = ({ showNav }: Props) => {
           <ul className='flex overflow-y-auto lg:items-center lg:space-x-2 max-lg:flex-col max-lg:text-neutral-700 max-lg:text-xl max-lg:font-medium max-lg:space-y-6 max-lg:h-auto'>
             <ProductNav />
             <SolutionNav />
+            <OpenSourceNav />
+            <li>
+              <a
+                href=''
+                className='flex items-center p-1 max-lg:font-semibold hover:text-neutral-300'
+              >
+                Pricing
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
