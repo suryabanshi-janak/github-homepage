@@ -1,5 +1,6 @@
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/Hero';
+import Productivity from './components/productivity/Productivity';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <div>
         <div className='overflow-hidden'>
           <Hero />
+          <Productivity />
         </div>
       </div>
     </div>
