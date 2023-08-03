@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import CodeEditor from './CodeEditor';
 
 const Productivity = () => {
   return (
@@ -66,6 +67,8 @@ const Productivity = () => {
             </motion.h3>
           </div>
         </div>
+
+        <CodeEditor />
       </div>
     </section>
   );
