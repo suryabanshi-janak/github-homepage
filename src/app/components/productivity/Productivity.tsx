@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import CodeEditor from './CodeEditor';
 import CodeSpace from './CodeSpace';
 import CopilotFeature from './CopilotFeature';
+import GithubActions from './GithubActions';
+import GithubServiceCard from './GithubServiceCard';
 
 const Productivity = () => {
   return (
@@ -73,6 +75,30 @@ const Productivity = () => {
         <CodeEditor />
         <CodeSpace />
         <CopilotFeature />
+
+        <div className='flex justify-between md:space-x-10 max-md:flex-col'>
+          <GithubServiceCard
+            service='GitHub Actions'
+            description='automates your build, test, and deployment workflow with simple and secure CI/CD.'
+            buttonText='Discover GitHub Actions'
+            imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png'
+          />
+          <GithubServiceCard
+            service='GitHub Mobile'
+            description='fits your projects in your pocket, so you never miss a beat while on the go.'
+            buttonText='Get GitHub Mobile'
+            imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png'
+            leftHover='-400px'
+          />
+        </div>
+
+        <motion.div
+          initial={{ height: 0 }}
+          whileInView={{ height: '160px' }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: false }}
+          className='md:ml-10 ml-3 h-[160px] mt-[-20px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b]'
+        ></motion.div>
       </div>
     </section>
   );
