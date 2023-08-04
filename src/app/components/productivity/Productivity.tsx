@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import CodeEditor from './CodeEditor';
 import CodeSpace from './CodeSpace';
+import CopilotFeature from './CopilotFeature';
 
 const Productivity = () => {
   return (
@@ -71,6 +72,7 @@ const Productivity = () => {
 
         <CodeEditor />
         <CodeSpace />
+        <CopilotFeature />
       </div>
     </section>
   );
