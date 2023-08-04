@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import CodeEditor from './CodeEditor';
 import CodeSpace from './CodeSpace';
 import CopilotFeature from './CopilotFeature';
-import GithubActions from './GithubActions';
 import GithubServiceCard from './GithubServiceCard';
 
 const Productivity = () => {
