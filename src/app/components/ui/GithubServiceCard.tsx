@@ -1,5 +1,8 @@
 'use client';
+
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 import HoverCard from './HoverCard';
 
 interface Props {
@@ -68,15 +71,18 @@ const GithubServiceCard = ({
         </div>
       </div>
       <div className='overflow-hidden rounded-s-lg'>
-        <img
-          src={imgSrc}
-          className='w-full h-auto js-build-in-item build-in-scale-fade build-in-animate'
-          width='1209'
-          height='890'
+        <motion.img
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: 'tween', duration: 0.3 }}
+          className='w-full h-auto '
+          width='1208'
+          height='764'
           loading='lazy'
           decoding='async'
-          aria-hidden='true'
           alt=''
+          aria-hidden='true'
+          src={imgSrc}
         />
       </div>
     </HoverCard>

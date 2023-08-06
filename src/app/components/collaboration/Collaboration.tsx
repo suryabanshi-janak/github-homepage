@@ -4,24 +4,9 @@ import { motion } from 'framer-motion';
 
 import GithubIssues from './GithubIssues';
 import GithubServiceCard from '../ui/GithubServiceCard';
+import GithubSponsors from './GithubSponsors';
 
 const Collaboration = () => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
     <div
       id='collaboration'
@@ -108,6 +93,15 @@ const Collaboration = () => {
             leftHover='-400px'
           />
         </div>
+
+        <GithubSponsors />
+
+        <motion.div
+          initial={{ height: 0 }}
+          whileInView={{ height: '160px' }}
+          transition={{ delay: 0.2 }}
+          className=' md:ml-10 ml-3 h-[160px] mt-[-20px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#797ef9] to-[#abb4ff]'
+        ></motion.div>
       </div>
     </div>
   );
