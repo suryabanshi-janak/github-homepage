@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 
+import GithubIssues from './GithubIssues';
+
 const Collaboration = () => {
   const container = {
     hidden: { opacity: 0 },
@@ -85,7 +87,8 @@ const Collaboration = () => {
           decoding='async'
           alt="Illustration of project table view with cards grouped by 'Feature planning' phase."
           src='https://github.githubassets.com/images/modules/site/issues/illo/issues-plan.png'
-        ></img>
+        />
+        <GithubIssues />
       </div>
     </div>
   );
