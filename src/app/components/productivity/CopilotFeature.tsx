@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-
-import HoverCard from '../HoverCard';
+import HoverCard from '../ui/HoverCard';
 
 type TabType = 'python' | 'javascript' | 'go';
 

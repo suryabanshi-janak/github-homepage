@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-import { Icons } from '../Icons';
 import Container from '../ui/Container';
-import HamburgerButton from '../HamburgerButton';
+import HamburgerButton from '../ui/HamburgerButton';
 import Menu from './Menu';
+import { Icons } from '../ui/Icons';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);

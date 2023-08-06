@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
-
-import HoverCard from '../HoverCard';
+import HoverCard from './HoverCard';
 
 interface Props {
   service?: string;
@@ -9,6 +8,7 @@ interface Props {
   buttonText?: string;
   imgSrc?: string;
   leftHover?: string;
+  bgColor: string;
 }
 
 const GithubServiceCard = ({
@@ -17,12 +17,13 @@ const GithubServiceCard = ({
   buttonText,
   imgSrc,
   leftHover = '0',
+  bgColor,
 }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <HoverCard backgroundColor='#7ee787' direction='flex-col' left={leftHover}>
+    <HoverCard backgroundColor={bgColor} direction='flex-col' left={leftHover}>
       <div className='flex-col flex-1 p-8 md:flex sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 '>
-        <p className=' text-xl md:text-2xl mb-6 font-medium text-[#7d8590]'>
+        <p className='text-xl md:text-2xl mb-6 font-medium text-[#7d8590]'>
           <span className='font-semibold text-white'>{service}</span>{' '}
           {description}
         </p>

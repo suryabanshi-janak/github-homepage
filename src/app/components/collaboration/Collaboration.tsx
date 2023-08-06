@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 
 import GithubIssues from './GithubIssues';
+import GithubServiceCard from '../ui/GithubServiceCard';
 
 const Collaboration = () => {
   const container = {
@@ -89,6 +90,24 @@ const Collaboration = () => {
           src='https://github.githubassets.com/images/modules/site/issues/illo/issues-plan.png'
         />
         <GithubIssues />
+
+        <div className='flex justify-between md:space-x-10 max-md:flex-col'>
+          <GithubServiceCard
+            bgColor='#ffa28b'
+            service='GitHub Discussions'
+            description='create space to ask questions and have open-ended conversations.'
+            buttonText='Enable GitHub Discussions'
+            imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-discussions.png'
+          />
+          <GithubServiceCard
+            bgColor='#ffa28b'
+            service='Pull requests'
+            description='allow real-time communication and collaboration about code changes.'
+            buttonText='Check out pull requests'
+            imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-pull-requests.png'
+            leftHover='-400px'
+          />
+        </div>
       </div>
     </div>
   );

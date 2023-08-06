@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import CodeEditor from './CodeEditor';
 import CodeSpace from './CodeSpace';
 import CopilotFeature from './CopilotFeature';
-import GithubServiceCard from './GithubServiceCard';
+import GithubServiceCard from '../ui/GithubServiceCard';
 
 const Productivity = () => {
   return (
@@ -77,12 +77,14 @@ const Productivity = () => {
 
         <div className='flex justify-between md:space-x-10 max-md:flex-col'>
           <GithubServiceCard
+            bgColor='#7ee787'
             service='GitHub Actions'
             description='automates your build, test, and deployment workflow with simple and secure CI/CD.'
             buttonText='Discover GitHub Actions'
             imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png'
           />
           <GithubServiceCard
+            bgColor='#7ee787'
             service='GitHub Mobile'
             description='fits your projects in your pocket, so you never miss a beat while on the go.'
             buttonText='Get GitHub Mobile'

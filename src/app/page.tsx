@@ -1,8 +1,8 @@
 import Navbar from './components/navbar/Navbar';
-import Hero from './components/Hero';
 import Productivity from './components/productivity/Productivity';
 import StickyNav from './components/navbar/StickyNav';
 import Collaboration from './components/collaboration/Collaboration';
+import Hero from './components/ui/Hero';
 
 export default function Home() {
   return (
