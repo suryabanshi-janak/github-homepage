@@ -2,6 +2,7 @@ import Navbar from './components/navbar/Navbar';
 import Hero from './components/Hero';
 import Productivity from './components/productivity/Productivity';
 import StickyNav from './components/navbar/StickyNav';
+import Collaboration from './components/collaboration/Collaboration';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           <Hero />
           <StickyNav />
           <Productivity />
+          <Collaboration />
         </div>
       </div>
     </div>
