@@ -45,29 +45,35 @@ const StickyNav = () => {
     };
   }, []);
 
-  const NavItem = ({ nav }: { nav: NavType }) => {
-    return (
-      <a
-        href={`#${nav}`}
-        onMouseEnter={() => setHoveredNav(nav)}
-        onMouseLeave={() => setHoveredNav('')}
-        className={`max-lg: pt-2 capitalize ${
-          hoveredNav === nav ? 'lg:text-blue-500' : ''
-        } ${
-          activeNav === nav || smallNav
-            ? 'lg:text-blue-500 max-lg:pb-6'
-            : 'max-lg:hidden'
-        }`}
-      >
-        {nav}
-        <div
-          className={`w-10/12 max-lg:hidden mx-auto mt-1 h-[1px] bg-white scale-0 transition ease-in duration-300 ${
-            hoveredNav === nav || activeNav === nav ? 'scale-100 bg-white' : ''
+  const NavItem = useCallback(
+    ({ nav }: { nav: NavType }) => {
+      return (
+        <a
+          href={`#${nav}`}
+          onClick={() => setSmallNav(false)}
+          onMouseEnter={() => setHoveredNav(nav)}
+          onMouseLeave={() => setHoveredNav('')}
+          className={`max-lg: pt-2 capitalize ${
+            hoveredNav === nav ? 'lg:text-blue-500' : ''
+          } ${
+            activeNav === nav || smallNav
+              ? 'lg:text-blue-500 max-lg:pb-6'
+              : 'max-lg:hidden'
           }`}
-        />
-      </a>
-    );
-  };
+        >
+          {nav}
+          <div
+            className={`w-10/12 max-lg:hidden mx-auto mt-1 h-[1px] bg-white scale-0 transition ease-in duration-300 ${
+              hoveredNav === nav || activeNav === nav
+                ? 'scale-100 bg-white'
+                : ''
+            }`}
+          />
+        </a>
+      );
+    },
+    [activeNav, hoveredNav, smallNav]
+  );
 
   return (
     <div
@@ -158,6 +164,35 @@ const StickyNav = () => {
               </svg>
             </a>
           </div>
+          <button
+            onClick={() => setSmallNav(!smallNav)}
+            className='absolute lg:hidden right-12 top-4'
+          >
+            <svg
+              aria-hidden='true'
+              height='24'
+              fill='currentColor'
+              viewBox='0 0 24 24'
+              version='1.1'
+              width='24'
+              data-view-component='true'
+              className={` text-white ${smallNav ? 'hidden' : ''}`}
+            >
+              <path d='M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z'></path>
+            </svg>
+            <svg
+              aria-hidden='true'
+              height='24'
+              fill='currentColor'
+              viewBox='0 0 24 24'
+              version='1.1'
+              width='24'
+              data-view-component='true'
+              className={` text-white ${smallNav ? '' : 'hidden'}`}
+            >
+              <path d='M5.72 5.72a.75.75 0 0 1 1.06 0L12 10.94l5.22-5.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L13.06 12l5.22 5.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L12 13.06l-5.22 5.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.94 12 5.72 6.78a.75.75 0 0 1 0-1.06Z'></path>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
