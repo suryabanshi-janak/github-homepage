@@ -3,6 +3,7 @@ import Productivity from './components/productivity/Productivity';
 import StickyNav from './components/navbar/StickyNav';
 import Collaboration from './components/collaboration/Collaboration';
 import Hero from './components/ui/Hero';
+import Security from './components/security/Security';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           <StickyNav />
           <Productivity />
           <Collaboration />
+          <Security />
         </div>
       </div>
     </div>
