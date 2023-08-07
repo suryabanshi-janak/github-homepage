@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import BuildCard from './BuildCard';
+import GithubAdvancedSecurity from './GithubAdvancedSecurity';
 
 const Security = () => {
   return (
@@ -62,6 +64,10 @@ const Security = () => {
             </h3>
           </motion.div>
         </motion.div>
+
+        <BuildCard />
+
+        <GithubAdvancedSecurity />
       </div>
     </div>
   );
