@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 
 import BuildCard from './BuildCard';
 import GithubAdvancedSecurity from './GithubAdvancedSecurity';
-import GithubSponsors from './GithubSponsors';
+import SecretScanning from './SecretScanning';
+import GithubServiceCard from '../ui/GithubServiceCard';
 
 const Security = () => {
   return (
@@ -71,7 +72,25 @@ const Security = () => {
 
         <GithubAdvancedSecurity />
 
-        <GithubSponsors />
+        <SecretScanning />
+
+        <div className='flex justify-between md:space-x-10 max-md:flex-col'>
+          <GithubServiceCard
+            bgColor='#939aff'
+            service='Dependabot'
+            description='makes it easy to find and fix vulnerable dependencies in your supply chain.'
+            buttonText='Explore Dependabot'
+            imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-dependabot.png'
+          />
+          <GithubServiceCard
+            bgColor='#939aff'
+            service='Code scanning'
+            description='is GitHub’s static code analysis tool that helps you remediate issues in your code.'
+            buttonText='Download the latest SAST ebook'
+            imgSrc='https://github.githubassets.com/images/modules/site/home-campaign/illu-code-scanning.png'
+            leftHover='-400px'
+          />
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import HoverCard from '../ui/HoverCard';
 
-const GithubSponsors = () => {
+const SecretScanning = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -11,8 +11,9 @@ const GithubSponsors = () => {
       <HoverCard backgroundColor='#939aff' direction='' left='0'>
         <div className='overflow-auto md:flex flex-col md:space-y-20 flex-1 py-20 md:p-10 p-5 my-6    justify-between md:min-w-[400px]'>
           <p className=' text-xl md:text-2xl mb-6 font-medium text-[#7d8590]'>
-            <span className='font-medium text-white'>GitHub Sponsors</span> lets
-            you support your favorite open source maintainers and projects.
+            <span className='font-medium text-white'>Secret scanning</span>{' '}
+            automatically looks for partner patterns and prevents fraudulent use
+            of accidentally committed secrets.
           </p>
           <div>
             <a
@@ -21,7 +22,7 @@ const GithubSponsors = () => {
               href=''
               className='inline-block py-1 text-xl font-semibold text-white'
             >
-              Invest With GitHub Sponsers
+              Read about secret scanning
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className={` mb-[2px] text-white transition inline-block ml-3 ease-in duration-300  ${
@@ -76,4 +77,4 @@ const GithubSponsors = () => {
   );
 };
 
-export default GithubSponsors;
+export default SecretScanning;
