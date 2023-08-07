@@ -4,6 +4,7 @@ import StickyNav from './components/navbar/StickyNav';
 import Collaboration from './components/collaboration/Collaboration';
 import Hero from './components/ui/Hero';
 import Security from './components/security/Security';
+import Connect from './components/Connect';
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
           <Productivity />
           <Collaboration />
           <Security />
+          <div className='relative overflow-hidden'>
+            <Connect />
+          </div>
         </div>
       </div>
     </div>
